@@ -1,0 +1,12 @@
+<p>welcome works!</p>
+<div *ngIf="auth.isloggedIn">
+    yes
+<div *ngIf="auth.user | async as user">
+    <button (click)="logOut()" style="float: right">Logout</button>
+    <h3>Howdy, {{ user.uid }}</h3>
+
+    <p><b>email:</b>{{ user.email }}</p>
+    <p><b>fname:</b>{{user.firstName}}</p>
+    <p><b>Lastname:</b>{{user.lastName}}</p>
+</div>
+</div>
